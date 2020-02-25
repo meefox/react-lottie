@@ -11,7 +11,7 @@ https://meefox.github.io/react-lottie-last
 
 ---
 ### What is the differnce from lottie-web (original)?
-- added `isForceSegment` flag for force segment play against stacked playing by default.
+- added `isForceSegments` flag for force segments to play immediately.
 ---
 
 ## Why Lottie?
@@ -97,6 +97,7 @@ the object representing the animation settings that will be instantiated by body
 >
 >**rendererSettings** *required*
 
+
 **width** *optional* [default: `100%`]
 
 pixel value for containers width.
@@ -117,6 +118,20 @@ eventListeners=[
     callback: () => console.log('the animation completed:'),
   },
 ]
+```
+
+**segments** *optional* [default: `[]`]
+a tuple with the first frame and the last frame
+```jsx
+<Lottie options={defaultOptions}
+  segments={[0, 120]}/>
+```
+
+**isForceSegments** *optional* [default: `false`]
+`true` force to play segments immediately or `false` after current segment.
+```jsx
+<Lottie options={defaultOptions}
+  isForceSegments={true}/>
 ```
 
 ## Related Projects
