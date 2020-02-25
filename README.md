@@ -3,11 +3,16 @@
 [![npm version](https://badge.fury.io/js/react-lottie.svg)](http://badge.fury.io/js/react-lottie)
 
 ## Demo
-https://chenqingspring.github.io/react-lottie
+https://meefox.github.io/react-lottie-last
 
 ## Wapper of bodymovin.js
 
 [bodymovin](https://github.com/bodymovin/bodymovin) is [Adobe After Effects](http://www.adobe.com/products/aftereffects.html) plugin for exporting animations as JSON, also it provide bodymovin.js for render them as svg/canvas/html.
+
+---
+### What is the differnce from lottie-web (original)?
+- added `isForceSegment` flag for force segment play against stacked playing by default.
+---
 
 ## Why Lottie?
 
@@ -28,7 +33,7 @@ Looking for lottie files › https://www.lottiefiles.com/
 
 Install through npm:
 ```
-npm install --save react-lottie
+npm install --save react-lottie-last
 ```
 
 ## Usage
@@ -55,7 +60,7 @@ export default class LottieControl extends React.Component {
 
     const defaultOptions = {
       loop: true,
-      autoplay: true, 
+      autoplay: true,
       animationData: animationData,
       rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice'
@@ -90,7 +95,7 @@ the object representing the animation settings that will be instantiated by body
 >
 >**animationData** *required*
 >
->**rendererSettings** *required* 
+>**rendererSettings** *required*
 
 **width** *optional* [default: `100%`]
 
